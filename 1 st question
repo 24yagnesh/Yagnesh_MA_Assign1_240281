@@ -1,0 +1,21 @@
+class solution{
+public:
+int majorityelement(vector<int>&nums){
+int character=nums[0];//assume that first element of the set is the character
+int count=1;
+for(int i=1;i<nums.size();i++){
+  if (count==0){
+     character=nums[i];
+     count=1;
+     }
+     else if (character==nums[i]){
+     count++;//as current element same as character count increments
+     }
+     else{
+     count--;// as we started count with 1 current elememt doesn't matches with character count decrements
+     }
+     }
+     return character;
+}
+}
+     
